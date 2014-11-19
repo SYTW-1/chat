@@ -94,6 +94,7 @@ describe "Test APP chat: Comprobacion de funciones" do
 	it "Update" do
 		get '/update'
 		expect(last_response.body).to eq("Not an ajax request")
+		
 	end
 
 	it "User" do
