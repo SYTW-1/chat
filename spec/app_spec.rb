@@ -10,9 +10,8 @@ require 'selenium-webdriver'
 require 'rubygems'
 require 'rspec'
 
-
 include Rack::Test::Methods
-
+=begin
 describe "Test APP chat: Comprobacion de enlaces" do
 
 	def app
@@ -60,7 +59,7 @@ describe "Test APP chat: Comprobacion de enlaces" do
 		expect(@browser.find_element(:id,"title").text).to eq("Please sign in")
    end
 end
-
+=end
 describe "Test APP chat: Comprobacion de funciones" do
 
 	def app
@@ -77,6 +76,12 @@ describe "Test APP chat: Comprobacion de funciones" do
 		expect(last_response).to be_ok
 	end
 
+	it "post user" do
+		post '/' , :username => "Prueba"
+		post '/' , :username => "Prueba"
+		expect(last_response.body).to eq("")
+	end
+
 	it "Cierre de sesion" do
 		get '/logout'
 		expect(last_response.body).to eq("")
@@ -89,6 +94,11 @@ describe "Test APP chat: Comprobacion de funciones" do
 
 	it "Update" do
 		get '/update'
+		expect(last_response.body).to eq("Not an ajax request")
+	end
+
+	it "Update" do
+		get '/update', request.xhr
 		expect(last_response.body).to eq("Not an ajax request")
 	end
 
