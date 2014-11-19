@@ -13,7 +13,6 @@ require 'rspec'
 
 include Rack::Test::Methods
 
-=begin
 describe "Test APP chat: Comprobacion de enlaces" do
 
 	def app
@@ -61,7 +60,7 @@ describe "Test APP chat: Comprobacion de enlaces" do
 		expect(@browser.find_element(:id,"title").text).to eq("Please sign in")
    end
 end
-=end
+
 describe "Test APP chat: Comprobacion de funciones" do
 
 	def app
