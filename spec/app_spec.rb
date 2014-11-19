@@ -96,11 +96,6 @@ describe "Test APP chat: Comprobacion de funciones" do
 		expect(last_response.body).to eq("Not an ajax request")
 	end
 
-	it "Update" do
-		get '/update', request.xhr
-		expect(last_response.body).to eq("Not an ajax request")
-	end
-
 	it "User" do
 		get '/user'
 		expect(last_response.body).to eq("Not an ajax request")
