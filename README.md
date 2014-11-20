@@ -8,3 +8,7 @@ Example of how to build a simple chat using jQuery and Sinatra
 Blazeeboy gist [https://gist.github.com/blazeeboy/9289678](https://gist.github.com/blazeeboy/9289678)
 
 http://sytw-1.github.io/chat
+https://travis-ci.org/alu0100611298/chat
+https://coveralls.io/r/alu0100611298/chat
+https://chat-blazee.herokuapp.com/
+https://github.com/SYTW-1/chat
