@@ -1,4 +1,4 @@
-task :default => :spec
+task :default => :tests
 
 desc "Run the server via Sinatra"
 task :sinatra do
@@ -34,7 +34,7 @@ task :heroku do
 end
 
 desc "Run tests (default)"
-task :tests do
+task :tests => :spec do
 #    sh "heroku pg:reset DATABASE_URL --confirm sytw5"
 #    sh "heroku run rake db:migrate"
 #    sh "rm my_shortened_urls.db"
