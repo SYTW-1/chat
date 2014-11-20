@@ -9,7 +9,11 @@
         .panel-body
           #chat.box
         .panel-footer
-          %input#text.large{:placeholder=>"Write and Enter"}
+          .row
+            .col-xs-12.col-md-10
+              %input#text.large{:placeholder=>"Write and Enter"}
+            .col-xs-12-col-md-2
+              %button.btn.btn-success{"onclick"=>"javascript:send()"} Send
     .col-xs-12.col-md-4
       .panel.panel-primary
         .panel-heading
