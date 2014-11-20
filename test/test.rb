@@ -6,8 +6,6 @@ require 'minitest/autorun'
 require 'rack/test'
 require 'selenium-webdriver'
 require 'rubygems'
-require 'coveralls'
-Coveralls.wear!
 
 include Rack::Test::Methods
 
@@ -23,6 +21,7 @@ describe "Test APP chat: Comprobacion de enlaces" do
 	  if (ARGV[0].to_s == "local")
 		 @site = 'localhost:9292/'
 	  end
+	  @site = 'localhost:9292/'
 	  @browser.get(@site)
    end
    
