@@ -22,7 +22,6 @@ describe "Test APP chat: Comprobacion de enlaces" do
 		 @site = 'localhost:9292/'
 	  end
 	  @site = 'localhost:9292/'
-	  @browser.get(@site)
    end
    
    after :all do
