@@ -30,6 +30,7 @@ describe "Test APP chat: Comprobacion de funciones" do
 
 	it "post user" do
 		post '/' , :username => "Prueba"
+		post '/' , :username => "Prueba"
 		expect(last_response).to be_ok
 	end
 
