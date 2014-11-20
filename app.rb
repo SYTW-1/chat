@@ -18,6 +18,7 @@ get '/' do
     haml :chat
   end
 end
+
 post '/' do
   if(user.include?(params[:username]))
     redirect '/'
