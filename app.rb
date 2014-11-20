@@ -67,7 +67,6 @@ end
 get '/chat/update' do
   return [404, {}, "Not an ajax request"] unless request.xhr?
   @updates = chat[params['last'].to_i..-1] || []
-
   @last = chat.size
   haml :chat_response, :layout => false
 end
