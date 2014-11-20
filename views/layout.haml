@@ -65,6 +65,7 @@
         if (refreshKeyPressed) {
             message = "refreshed";
         }
+        $.get('/logout');
         event.returnValue = message;
     });
   }(jQuery));
